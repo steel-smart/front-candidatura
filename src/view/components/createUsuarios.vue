@@ -9,7 +9,7 @@
 
       <div class="card-body">
         <div class="col-md-12">
-          <div class="form">
+          <form class="form"  @submit="confirm(lista_campos == '' ? 'cria' : 'edita')" >
             <div class="row form-group">
               <div class="col-md-3">
                 <label for="saldo">nome:</label>
@@ -76,23 +76,25 @@
                 </div>
               </div>
             </div>
-          </div>  
           </div>
-        </div>
-
+          
         <div class="row justify-content-end">
           <div class="col-md-12 text-center">
             <v-btn
+            type="submit" 
               color="primary"
               elevation="2"
               :loading="verif"
-              @click.prevent="confirm(lista_campos == '' ? 'cria' : 'edita')"
               class="btn btn-primary"
               :disabled="verif"
               >{{ !lista_campos.id ? "cria" : "edita" }}</v-btn
             >
           </div>
         </div>
+        </form>  
+
+        </div>
+
 
         <!-- </div> -->
       </div>
@@ -112,19 +114,18 @@ export default {
       verif: false,
 
       form: {
-        nome: null,
-        cpf_cnpj: null,
+        nome: '',
+        cpf_cnpj: '',
         usuario_id: null,
-        login: null,
+        login: '',
         perfil:1,
-        password:null
+        password:''
       },
       variableWithMask: "",
 
       value: "",
       loading: false,
-      cpf_cnpj1: null,
-      saldo: null,
+      cpf_cnpj1: '',
     };
   },
   mounted() {
