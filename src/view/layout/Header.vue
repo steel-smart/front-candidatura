@@ -66,7 +66,7 @@
               <v-list-item-title>Dashboard</v-list-item-title>
             </v-list-item>
             <v-list-item
-              v-if="uss.perfil == 1"
+              v-if="uss.perfil == 2"
               @click="rotas('listaUsuario')"
               link
             >

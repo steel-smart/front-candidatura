@@ -66,7 +66,7 @@ export default {
 
       this.$store
         .dispatch(LOGIN, this.form)
-        .then(() => this.$router.push({ name: "listaUsuario" }))
+        .then(() => this.$router.push({ name: "dashboard" }))
         .catch(() => {
           Swal.fire({
             title: "Dados incorretos!",
