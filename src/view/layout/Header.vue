@@ -56,7 +56,6 @@
 
           <v-list nav dense>
             <v-list-item
-              v-if="uss.perfil == 1"
               @click="rotas('dashboard')"
               link
             >
@@ -66,7 +65,7 @@
               <v-list-item-title>Dashboard</v-list-item-title>
             </v-list-item>
             <v-list-item
-              v-if="uss.perfil == 2"
+              v-if="uss.perfil == 1"
               @click="rotas('listaUsuario')"
               link
             >
